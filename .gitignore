@@ -18,6 +18,7 @@ coverage
 
 # Cordova/CCA project dir
 build
+vulcanized
 
 # Dependency directory
 # Commenting this out is preferred by some people, see

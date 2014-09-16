@@ -8,11 +8,15 @@
   },
   "author": "Mark Koudritsky <kamrik@gmail.com>",
   "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-jshint": "^1.8.4",
+    "gulp": "latest",
+    "gulp-bower": "latest",
+    "gulp-vulcanize": "latest",
+    "gulp-sass": "latest",
+    "gulp-json-editor": "latest",
+    "merge-stream": "latest",
     "cca": "^0.4.0-rc2",
     "cordova-lib": "latest",
-    "del": "^0.1.1",
+    "del": "latest",
     "q": "latest"
   }
 }
