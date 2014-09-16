@@ -1,12 +1,13 @@
-var gulp = require('gulp');
-var del = require('del');
-var cca = require('cca');
-var cdv = cca.cordovaLib.cordova;
-
 var path = require('path');
 var fs = require('fs');
 var Q = require('q');
+var gulp = require('gulp');
+var del = require('del');
+var cdv = require('cordova-lib').cordova;
 
+// TODO: export tis from cca to avoid the hackish 'require'
+var createApp = require('cca/src/create-app');
+var ccaRoot = path.dirname(path.dirname(require.resolve('cca')));
 
 var buildDir = path.join(__dirname, 'build');
 var srcDir = path.join(__dirname, 'src');
@@ -23,7 +24,7 @@ var manifest = require('./src/www/manifest.mobile.json');
 var appId = manifest.packageId;
 var pkg = require('./package.json');
 
-// Note, most org.chromium.* plugins should be added by adding permissions to manifest.
+// Note, most org.chromium.* plugins should be added by adding permissions to the manifest.
 // Only use extra_plugins list to add plugins that can't be added via the manifest.
 var extra_plugins = [];
 // TODO: add a check here to verify empty intersection with cca.pluginMap
@@ -33,7 +34,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('ccacreate', ['clean'], function() {
-    return cca.createApp(buildDir, cca.ccaRoot, __dirname, appId, pkg.name, flags)
+    return createApp(buildDir, ccaRoot, __dirname, appId, pkg.name, flags)
     .then(function() {
         // Further Cordova commands must be run inside the cordova project dir.
         process.chdir(buildDir);
