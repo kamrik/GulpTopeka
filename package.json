@@ -1,0 +1,17 @@
+{
+  "name": "GulpCCA_HelloWorld",
+  "version": "0.0.1",
+  "description": "Hellow World app with Gulp and CCA",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Mark Koudritsky <kamrik@gmail.com>",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4",
+    "cca": "latest",
+    "del": "^0.1.1",
+    "q": "latest"
+  }
+}
