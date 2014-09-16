@@ -6,7 +6,8 @@ Gulp based sample with a Chrome App for mobiles using [cca](https://github.com/M
 To try:
 
     git clone
-    git submodule init
+    git submodule update --init
+    npm install
     gulp bower
     gulp ccacreate
     gulp build
