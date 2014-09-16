@@ -1,7 +1,7 @@
 GulpCCA
 =======
 
-Gulp based template with a HelloWorld Chrome App for mobiles using [cca](https://github.com/MobileChromeApps/mobile-chrome-apps).
+Gulp based sample with a Chrome App for mobiles using [cca](https://github.com/MobileChromeApps/mobile-chrome-apps). It builds a Polymer based Topeka app from https://github.com/Polymer/Topeka
 
 To try:
 
